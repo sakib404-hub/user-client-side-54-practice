@@ -2,3 +2,13 @@
 @plugin "daisyui"{
   themes: light --default, dark cupcake;
 };
+
+.nav-link:hover{
+  display: inline-block;
+  color: red;
+}
+
+.nav-link.active{
+  color: rgba(233, 14, 14, 0.842);
+  border-bottom: 4px solid rgba(233, 14, 14, 0.842);
+}

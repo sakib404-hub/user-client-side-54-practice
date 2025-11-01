@@ -1,6 +1,16 @@
 import React from 'react';
+import { NavLink } from 'react-router';
 
 const Header = () => {
+    const links = <div className='text-base font-semibold flex flex-col lg:flex-row gap-5'>
+        <NavLink className={'nav-link px-2'} to={'/'}>Home</NavLink>
+        <NavLink className={'nav-link px-2'}
+            to={'/about'}>About Us</NavLink>
+        <NavLink className={'nav-link px-2'}
+            to={'/users'}>Users</NavLink>
+        <NavLink className={'nav-link px-2'}
+            to={'/addUsers'}>Add Users</NavLink>
+    </div>
     return (
         <div className="navbar bg-base-100 shadow-sm">
             <div className="navbar-start">
@@ -11,32 +21,18 @@ const Header = () => {
                     <ul
                         tabIndex="-1"
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <li><a>Item 1</a></li>
-                        <li>
-                            <a>Parent</a>
-                            <ul className="p-2">
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
-                            </ul>
-                        </li>
-                        <li><a>Item 3</a></li>
+                        {
+                            links
+                        }
                     </ul>
                 </div>
                 <a className="btn btn-ghost text-xl">daisyUI</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li><a>Item 1</a></li>
-                    <li>
-                        <details>
-                            <summary>Parent</summary>
-                            <ul className="p-2">
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
-                            </ul>
-                        </details>
-                    </li>
-                    <li><a>Item 3</a></li>
+                    {
+                        links
+                    }
                 </ul>
             </div>
             <div className="navbar-end">
