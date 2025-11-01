@@ -5,11 +5,11 @@ const Header = () => {
     const links = <div className='text-base font-semibold flex flex-col lg:flex-row gap-5'>
         <NavLink className={'nav-link px-2'} to={'/'}>Home</NavLink>
         <NavLink className={'nav-link px-2'}
-            to={'/about'}>About Us</NavLink>
+            to={'/aboutUs'}>About Us</NavLink>
         <NavLink className={'nav-link px-2'}
             to={'/users'}>Users</NavLink>
         <NavLink className={'nav-link px-2'}
-            to={'/addUsers'}>Add Users</NavLink>
+            to={'/addUser'}>Add User</NavLink>
     </div>
     return (
         <div className="navbar bg-base-100 shadow-sm">
@@ -26,7 +26,7 @@ const Header = () => {
                         }
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">daisyUI</a>
+                <a className="btn btn-ghost text-xl">User Management</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -36,7 +36,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Button</a>
+                <a className="btn">Login</a>
             </div>
         </div>
     );
