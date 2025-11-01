@@ -12,13 +12,16 @@ const AddUser = () => {
             email,
             password
         }
-        fetch('', {
+        fetch('http://localhost:5010/users', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(newUser)
         })
+            .then((res) => res.json())
+            .then((data) => console.log(data))
+            .catch((error) => console.log(error.message))
     }
     return (
         <div className='flex items-center justify-center my-40'>
