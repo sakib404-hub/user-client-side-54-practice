@@ -6,7 +6,7 @@ import AllUsers from '../AllUsers/AllUsers';
 const Users = () => {
     const usersLoaded = useLoaderData();
     const [users, setUser] = useState(usersLoaded)
-    users.length ? console.log('true') : console.log('false');
+    // users.length ? console.log('true') : console.log('false');
     return (
         <div>
             {
